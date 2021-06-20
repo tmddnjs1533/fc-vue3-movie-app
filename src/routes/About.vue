@@ -19,6 +19,7 @@
 
 <script>
 import Loader from "~/components/Loader";
+import {mapState} from "vuex";
 export default {
   components: {Loader},
   data() {
@@ -27,6 +28,14 @@ export default {
     }
   },
   computed: {
+    ...mapState('about', [
+        'image',
+        'name',
+        'email',
+        'blog',
+        'phone'
+    ])
+  /*
     image() {
       return this.$store.state.about.image
     },
@@ -42,6 +51,7 @@ export default {
     phone() {
       return this.$store.state.about.phone
     }
+  */
   },
   mounted() {
     this.init()
@@ -56,7 +66,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/main";
 .about{
   text-align: center;
   .photo {

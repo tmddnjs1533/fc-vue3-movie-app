@@ -41,7 +41,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/main";
 .loading{
     margin: auto;
     left: 0;

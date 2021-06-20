@@ -1,13 +1,15 @@
 import axios from "axios";
 import _uniqBy from "lodash/uniqBy";
 
+const _defaultMessage = "여기에 검색 결과가 표시됩니다.";
+
 export default {
   // 모듈
   namespaced: true,
   // 데이터
   state: () => ({
     movies: [],
-    message: "여기에 검색 결과가 표시됩니다.",
+    message: _defaultMessage,
     loading: false,
     theMovie: {},
   }),
@@ -23,6 +25,8 @@ export default {
     },
     resetMovies(state) {
       state.movies = [];
+      state.message = _defaultMessage;
+      state.loading = false;
     },
   },
   // 비동기다! (중요)
