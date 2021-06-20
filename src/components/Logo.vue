@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
+@import "../scss/main";
 
 .logo {
   font-family: "Oswald", sans-serif;
